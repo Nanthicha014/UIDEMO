@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="314.0" style="-fx-background-color: #00e5ff;">
+         <children>
+            <Label layoutX="59.0" layoutY="184.0" text="Welcome to MIT-SAIYAI">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ae2b92" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="26.0" layoutY="343.0" text="CopyRight@Aom Nanthicha">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d71f31" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <FontAwesomeIconView glyphName="HEART" layoutX="127.0" layoutY="138.0" size="80" />
+         </children>
+      </AnchorPane>
+      <JFXTextField labelFloat="true" layoutX="395.0" layoutY="97.0" promptText="username" unFocusColor="#ff4081">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#d71f31" />
+                  <Stop color="#ff4081" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXTextField>
+      <JFXPasswordField focusColor="#ff4081" layoutX="395.0" layoutY="159.0" promptText="Password" unFocusColor="#ff4081" />
+      <FontAwesomeIconView glyphName="USER" layoutX="352.0" layoutY="120.0" size="30" />
+      <FontAwesomeIconView glyphName="UNLOCK_ALT" layoutX="354.0" layoutY="183.0" size="30" text="" />
+   </children>
+</AnchorPane>
