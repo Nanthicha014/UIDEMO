@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -9,23 +10,14 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="314.0" style="-fx-background-color: #00e5ff;">
          <children>
-            <Label layoutX="59.0" layoutY="184.0" text="Welcome to MIT-SAIYAI">
+            <Label layoutX="59.0" layoutY="184.0" text="Welcome to MIT-SAIYAI" textFill="#e742ff">
                <font>
                   <Font size="22.0" />
                </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop color="#ae2b92" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
             </Label>
             <Label layoutX="26.0" layoutY="343.0" text="CopyRight@Aom Nanthicha">
                <font>
@@ -35,15 +27,15 @@
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
                         <Stop color="#d71f31" />
-                        <Stop color="WHITE" offset="1.0" />
+                        <Stop color="#4842ff" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </textFill>
             </Label>
-            <FontAwesomeIconView glyphName="HEART" layoutX="127.0" layoutY="138.0" size="80" />
+            <FontAwesomeIconView fill="#fc551d" glyphName="HEART" layoutX="127.0" layoutY="138.0" size="80" text="" />
          </children>
       </AnchorPane>
-      <JFXTextField labelFloat="true" layoutX="395.0" layoutY="97.0" promptText="username" unFocusColor="#ff4081">
+      <JFXTextField fx:id="username" labelFloat="true" layoutX="395.0" layoutY="97.0" promptText="username" unFocusColor="#ff4081">
          <focusColor>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -53,8 +45,23 @@
             </LinearGradient>
          </focusColor>
       </JFXTextField>
-      <JFXPasswordField focusColor="#ff4081" layoutX="395.0" layoutY="159.0" promptText="Password" unFocusColor="#ff4081" />
-      <FontAwesomeIconView glyphName="USER" layoutX="352.0" layoutY="120.0" size="30" />
-      <FontAwesomeIconView glyphName="UNLOCK_ALT" layoutX="354.0" layoutY="183.0" size="30" text="" />
+      <JFXPasswordField fx:id="Password" focusColor="#ff4081" labelFloat="true" layoutX="395.0" layoutY="159.0" promptText="Password" unFocusColor="#ff4081" />
+      <FontAwesomeIconView fill="#e82aaf" glyphName="USER" layoutX="352.0" layoutY="120.0" size="30" text="" />
+      <FontAwesomeIconView fill="#1bc22c" glyphName="UNLOCK_ALT" layoutX="354.0" layoutY="183.0" size="30" text="" />
+      <JFXButton fx:id="btnLogin" accessibleRole="PARENT" layoutX="446.0" layoutY="226.0" onAction="#Login" prefHeight="33.0" prefWidth="91.0" ripplerFill="#42e0ff" style="-fx-background-color: #42e0ff;" text="Login" textFill="#ff4081" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="Bodoni MT Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="340.0" layoutY="342.0" text="DB Status:" textFill="#1ea64c">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="dbStatus" layoutX="412.0" layoutY="338.0" prefHeight="17.0" prefWidth="102.0" textFill="#cd20bb">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
